@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfApp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400">
+    <Grid>
+        <TextBox x:Name="txtUsername" HorizontalAlignment="Center" Margin="0,64,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="136" Height="23"/>
+        <TextBox x:Name="txtPassword" HorizontalAlignment="Center" Margin="0,101,0,0" Text="Password" VerticalAlignment="Top" Width="136" Height="22"/>
+        <Button Content="Войти" HorizontalAlignment="Center" Margin="0,376,0,0" VerticalAlignment="Top" Height="40" Width="135" Background="#FFCD97DA" Click="Button_Click_1" />
+        <TextBlock HorizontalAlignment="Center" Margin="0,345,0,0" TextWrapping="Wrap" Text="Капча не пройдена" x:Name ="capchInfo"  VerticalAlignment="Top" Foreground="#FFCE1010"/>
+        <UniformGrid Name="PuzzleGrid" Columns="2" Rows="2" Width="166" Height="150" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,166,0,0">
+
+
+        </UniformGrid>
+    </Grid>
+</Window>
