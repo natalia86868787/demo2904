@@ -8,17 +8,38 @@
         Title="администратор" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="120.938"/>
+            <ColumnDefinition Width="279.062"/>
             <ColumnDefinition Width="83*">
 
             </ColumnDefinition>
         </Grid.ColumnDefinitions>
         <DataGrid Name ="UserGrid" SelectionChanged="UserGrid_SelectionChanged"
-                  SelectionMode="Single" CanUserAddRows="False" />
-        <StackPanel VerticalAlignment="Center" Margin="5,0,5,0" Grid.Column="1">
-            <TextBlock Text="Add od save"/>
-        </StackPanel>
+                  SelectionMode="Single" CanUserAddRows="False" Grid.ColumnSpan="2" />
+        <StackPanel VerticalAlignment="Center" Margin="5,0,5,0" Grid.Column="2">
+            <TextBlock Text="Add od save" Margin="5"/>
+            <TextBox x:Name ="txtLogin" Text="Логин" RenderTransformOrigin="0.5,0.5">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.023"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+            <PasswordBox x:Name ="txtPassword" Password="Пароль" Margin="5"/>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name ="btnAddUser" Content="Добавить пользователя"
+                        Margin="5" Click="btnAddUser_Click"/>
+                <Button x:Name="btnUpdateUser" Content="Сохранить изменения"
+                        Margin="5" Click="btnUpdateUser_Click"/>
 
+
+            </StackPanel>
+            <Button x:Name="btnUnblockUser" Content="Unblock od Block"
+                    Margin="5" Click="btnUnblockUser_Click"/>
+        </StackPanel>
 
     </Grid>
 </Window>
